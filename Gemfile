@@ -45,3 +45,5 @@ end
 
 gem 'rails_admin'
 gem 'devise', '~> 3.4'
+gem 'middleman', :git => 'https://github.com/middleman/middleman.git'
+gem 'middleman-sprockets', :git => 'https://github.com/middleman/middleman-sprockets.git'
