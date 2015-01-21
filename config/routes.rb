@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
   authenticate :user do
-    mount ::Middleman::Rack.new(app) => '/middleman'
+    mount ::Middleman::Rack.new(app) => '/'
   end
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end
