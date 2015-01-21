@@ -14,7 +14,7 @@ app = ::Middleman::Application.new
 Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
-  namespace :test do
+  authenticate :user do
     mount ::Middleman::Rack.new(app) => '/middleman'
   end
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
